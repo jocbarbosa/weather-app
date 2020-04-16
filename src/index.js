@@ -6,12 +6,14 @@ const app = express();
 
 // Define paths for express
 const publicDirectory = path.join(__dirname, '../public');
-const viewsPath = path.join(__dirname, '../templates');
+const viewsPath = path.join(__dirname, '../templates/views');
+const partialsPath = path.join(__dirname, '../templates/partials');
 
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
+hbs.registerPartials(partialsPath)
 
 // Setup static directory
 app.use(express.static(publicDirectory));
@@ -19,20 +21,29 @@ app.use(express.static(publicDirectory));
 app.get('', (request, response) => {
     response.render('index', {
         title: 'Weather Application',
-        name: 'John'
+        creator: 'John'
     });
 });
 
 app.get('/about', (request, response) => {
     response.render('about', {
-        title: 'About'
+        title: 'About',
+        creator: 'John Barbosa'
     });
 });
 
 app.get('/help', (request, response) => {
     response.render('help', {
         title: 'Help - FAQ and community',
-        content: 'My content'
+        content: 'My content',
+        creator: 'John '
+    });
+});
+
+app.get('*', (request, response) => {
+    response.render('404', {
+        title: '404',
+        errorMessage: 'Page Nout Found'
     });
 });
 
