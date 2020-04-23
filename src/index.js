@@ -83,6 +83,10 @@ app.get('/weather', (request, response) => {
 });
 
 
+app.get('/location', (request, response) => {
+    response.render('location');
+});
+
 app.get('*', (request, response) => {
     response.render('404', {
         title: '404',
