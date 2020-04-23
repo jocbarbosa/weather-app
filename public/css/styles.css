@@ -10,7 +10,7 @@ body {
 }
 
 .top__header {
-    background-color: #f56b3b;
+    background-color: #329ca8;
     width: 100%;
     position: fixed;
     top: 0;
@@ -18,6 +18,11 @@ body {
     padding: 4px;
     color: #FFF;
     text-align: center;
+}
+
+
+.my__location {
+    font-size: 14px;
 }
 
 footer {
@@ -29,10 +34,11 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    font-size: 14px;
 }
 
 header {
-    margin-top: 8px;
+    margin-top: 24px;
     margin-bottom: 2px;
     display: flex;
     justify-content: space-between;
@@ -71,7 +77,6 @@ header a {
 
 .location-text {
     color: #FAFAFA;
-    font-weight: bold;
     background-color: #269945;
     padding: 5px;
 }

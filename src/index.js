@@ -22,14 +22,14 @@ app.use(express.static(publicDirectory));
 app.get('', (request, response) => {
     response.render('index', {
         title: 'Weather Application',
-        creator: 'John'
+        creator: 'Node JS'
     });
 });
 
 app.get('/about', (request, response) => {
     response.render('about', {
         title: 'About',
-        creator: 'John Barbosa'
+        creator: 'Node JS'
     });
 });
 
@@ -37,7 +37,7 @@ app.get('/help', (request, response) => {
     response.render('help', {
         title: 'Help - FAQ and community',
         content: 'My content',
-        creator: 'John '
+        creator: 'Node JS'
     });
 });
 
@@ -84,7 +84,9 @@ app.get('/weather', (request, response) => {
 
 
 app.get('/location', (request, response) => {
-    response.render('location');
+    response.render('location', {
+        creator: 'Node JS'
+    });
 });
 
 app.get('*', (request, response) => {
