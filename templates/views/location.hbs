@@ -1,15 +1,52 @@
 {{>header}}
-<div class="form__location">
-    <form action="" method="get">
-        <div class="form__item">
-            <label>Latitude</label>
-            <input name="latitude">
-        </div>
-        <div class="form__item">
-            <label>Longitude</label>
-            <input name="longitude">
-        </div>
-        <button class="button" type="submit">Find location</button>
-    </form>
+<h2>{{title}}</h2>
+
+
+<div class="locations">
+    <div class="form__location">
+        <h4>Type the data</h4>
+        <form action="" method="get">
+            <div class="form__item">
+                <label>Latitude</label>
+                <input id="latitude" name="latitude">
+                <small>Example : 48.1600928</small>
+            </div>
+            <div class="form__item">
+                <label>Longitude</label>
+                <input id="longitude" name="longitude">
+                <small>Example : 11.5776128</small>
+            </div>
+            <button class="button button--location" type="submit">Find location</button>
+        </form>
+    </div>
+    <div class="map">
+        <h4>You are here</h4>
+        <table id="table-location">
+            <tr>
+                <th>Country: </th>
+                <td id="country"></td>
+            </tr>
+            <tr>
+                <th>Region: </th>
+                <td id="region"></td>
+            </tr>
+            <tr>
+                <th>TimeZone: </th>
+                <td id="timezone"></td>
+            </tr>
+            <tr>
+                <th>Temperature: </th>
+                <td id="temperature"></td>
+            </tr>
+            <tr>
+                <th>Wind speed: </th>
+                <td id="wind-speed"></td>
+            </tr>
+            <tr>
+                <th>Humidity: </th>
+                <td id="humidity"></td>
+            </tr>
+        </table>
+    </div>
 </div>
 {{>footer}}

@@ -85,7 +85,9 @@ app.get('/weather', (request, response) => {
 
 app.get('/location', (request, response) => {
     response.render('location', {
-        creator: 'Node JS'
+        creator: 'Node JS',
+        title: 'Get a weather location',
+        subtitle: 'Use this site to get the weather information'
     });
 });
 

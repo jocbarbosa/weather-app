@@ -41,6 +41,7 @@ header {
     margin-top: 24px;
     margin-bottom: 2px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #FFF;
     padding: 8px;
@@ -87,10 +88,50 @@ header a {
 }
 
 .form__location {
-
+    width: 200px;
 }
 
 .form__item input{
-    height: 30px;
+    height: 25px;
     width: 300px;
+    margin: 5px 0;
 }
+
+.form__item:last-of-type {
+    margin: 15px 0;
+}
+
+.button {
+    padding: 5px 15px;
+}
+
+.button--location {
+    margin-top: 10px;
+}
+
+.locations {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+#table-location {
+    border-collapse: collapse;
+    min-width: 400px;
+  }
+  
+  #table-location td, #table-location th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #table-location tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #table-location tr:hover {background-color: #ddd;}
+  
+  #table-location th {
+    text-align: left;
+    background-color: #489A47;
+    color: white;
+  }
