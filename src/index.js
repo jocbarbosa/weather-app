@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const req = require('request');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for express
 const publicDirectory = path.join(__dirname, '../public');
@@ -98,6 +99,6 @@ app.get('*', (request, response) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('Server UP and running')
+app.listen(port, () => {
+    console.log('Server UP and running on port ' + port);
 });
