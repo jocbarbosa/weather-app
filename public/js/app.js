@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
     const longitude = longitudeSearch.value;
 
 
-    fetch(`http://api.weatherstack.com/current?access_key=d5f217766402b840cb44aea9deb10e15&query=${latitude},${longitude}&units=m`).then((response) => {
+    fetch(`https://api.weatherstack.com/current?access_key=d5f217766402b840cb44aea9deb10e15&query=${latitude},${longitude}&units=m`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error);

@@ -45,7 +45,7 @@ app.get('/help', (request, response) => {
 app.get('/weather', (request, response) => {
 
     const { latitude, longitude } = request.query;
-    const url = 'http://api.weatherstack.com/current?access_key=d5f217766402b840cb44aea9deb10e15&query=' + latitude + ',' + longitude + '&units=m';
+    const url = 'https://api.weatherstack.com/current?access_key=d5f217766402b840cb44aea9deb10e15&query=' + latitude + ',' + longitude + '&units=m';
 
 
     req({ url: url, json: true }, (err, resp) => {
